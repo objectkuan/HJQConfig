@@ -1,8 +1,21 @@
 #!/bin/sh
+
+cwd=$(cd "$(dirname "$0")"; pwd)
+unamestr=`uname`
+
+## Vim Configuration ##
 rm -rf ~/.vimrc
 rm -rf ~/.vim
 
-cwd=$(cd "$(dirname "$0")"; pwd)
-
 ln -s $cwd/.vimrc ~/.vimrc
 ln -s $cwd/.vim ~/.vim
+
+## Tmux Configuration ##
+rm -rf ~/.tmux.conf
+ln -s $cwd/.tmux.conf ~/.tmux.conf
+
+## Bash Configuration ##
+if [[ "$unamestr" == 'Darwin' ]]; then
+	ln -s $cwd/.bash_profile ~/.bash_profile
+fi
+
