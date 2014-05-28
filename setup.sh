@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cwd=$(cd "$(dirname "$0")"; pwd)
 unamestr=`uname`
@@ -16,6 +16,7 @@ ln -s $cwd/.tmux.conf ~/.tmux.conf
 
 ## Bash Configuration ##
 if [[ "$unamestr" == 'Darwin' ]]; then
+	rm -rf ~/.bash_profile
 	ln -s $cwd/.bash_profile ~/.bash_profile
 fi
 
