@@ -1,0 +1,1 @@
+/home/hjq/hjq.workspace/.vim
