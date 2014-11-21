@@ -6,6 +6,7 @@ unamestr=`uname`
 ## Vim Configuration ##
 rm -rf ~/.vimrc
 rm -rf ~/.vim
+chmod 666 ~/viminfo
 
 ln -s $cwd/.vimrc ~/.vimrc
 ln -s $cwd/.vim ~/.vim
