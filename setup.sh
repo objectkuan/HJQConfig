@@ -20,3 +20,5 @@ if [[ "$unamestr" == 'Darwin' ]]; then
 	ln -s $cwd/.bash_profile ~/.bash_profile
 fi
 
+## Trash ##
+
